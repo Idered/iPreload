@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+	<title>iPreload - jQuery image preloader</title>
+	<meta name="author" content="Kasper Mikiewicz">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="container">
+
+	<header id="header" class="center main">
+		<h1>iPreload</h1>
+
+		<h2>jQuery image preloader<i>&bull;</i></h2>
+
+		<p>
+			<a href="http://twitter.com/Idered">Follow me on Twitter</a> or just
+			<a href="https://github.com/Idered/iPreload/zipball/master" id="dwn">download</a>
+		</p>
+
+	</header>
+
+	<div id="main" role="main">
+
+		<h3>Demo</h3>
+
+		<h4>Simple gallery</h4>
+
+		<ul id="gallery">
+			<li><a href="http://www.flickr.com/photos/jlk512/5986982399/" rel="nofollow"><img src="http://farm7.static.flickr.com/6008/5986982399_d352023f09_b.jpg"></a></li>
+			<li><a href="http://www.flickr.com/photos/noeetw/5986982405/" rel="nofollow"><img src="http://farm7.static.flickr.com/6122/5986982405_0edab294b9_b.jpg"></a></li>
+			<li><a href="http://www.flickr.com/photos/merras-cards/5986982407" rel="nofollow"><img src="http://farm7.static.flickr.com/6018/5986982407_5b36136ef6_b.jpg"></a></li>
+			<li><a href="http://www.flickr.com/photos/nagalka/5986982415/" rel="nofollow"><img src="http://farm7.static.flickr.com/6142/5986982415_a8345b90bc_b.jpg"></a></li>
+			<li><a href="http://www.flickr.com/photos/chamboncetv/5986982421" rel="nofollow"><img src="http://farm7.static.flickr.com/6024/5986982421_510e372649_b.jpg"></a></li>
+			<li><a href="http://www.flickr.com/photos/26508550@N07/5987542610" rel="nofollow"><img src="http://farm7.static.flickr.com/6025/5987542610_8b3e859944_b.jpg"></a></li>
+			<li><a href="http://www.flickr.com/photos/joshuaguttman/5987542620" rel="nofollow"><img src="http://farm7.static.flickr.com/6006/5987542620_5f3f8fa2f1_b.jpg"></a></li>
+			<li><a href="http://www.flickr.com/photos/westerw/5987542626" rel="nofollow"><img src="http://farm7.static.flickr.com/6009/5987542626_f15ac55132_b.jpg"></a></li>
+			<li><a href="http://www.flickr.com/photos/atmywindowsill/5987542628" rel="nofollow"><img src="http://farm7.static.flickr.com/6008/5987542628_d81edd3ba0_b.jpg"></a></li>
+		</ul>
+
+		<h4>Images in anchor href</h4>
+
+		<p>
+			This two will also be preloaded. <br/>
+			<a href="http://farm7.static.flickr.com/6072/6062022353_945ceb817b_b.jpg">First image</a><br/>
+			<a href="http://farm7.static.flickr.com/6185/6062022417_2af73ae985_b.jpg">Second image</a>
+		</p>
+
+
+		<h3>About</h3>
+
+		<h4>Options</h4>
+
+		<ul>
+			<li>onAll : function () - called when all images are fully loaded</li>
+			<li>onOne : function (image) - called when one image is fully loaded</li>
+			<li>onFail : function (image) - called when an error occurred during loading</li>
+			<li>beforeShow : function (image) - called before image is shown</li>
+			<li>fadeTime : var(default is 500) - fade time in milliseconds</li>
+			<li>delay : var(default is 100) - time between displaying next image</li>
+			<li>interval : var(default is 200) - time between checking if any of images</li>
+			<li>wrapper : var(default is 'a') - tag in which image is wrapped during loading</li>
+			<li>preloadLinkImages: var(default is true) - preload images in href attributes?</li>
+		</ul>
+
+		<h4>Usage</h4>
+<pre><code>(function($) {
+  $('body').iPreload();
+})(jQuery)
+</code></pre>
+
+	</div>
+</div>
+
+
+<script src="jquery.js"></script>
+<script src="../jQuery.iPreload.js"></script>
+<script>(function() { $('body').iPreload(); })(jQuery);</script>
+</body>
+</html>
